@@ -1,0 +1,36 @@
+{
+  "name": "wild-guess-bot",
+  "version": "0.0.1",
+  "description":
+    "Reddit bot for submitting game day stat predictions to /r/wildhockey",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorsonmscott/WildGuessBot.git"
+  },
+  "author": "Max Thorson <max@thorsonmscott.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thorsonmscott/WildGuessBot/issues"
+  },
+  "homepage": "https://github.com/thorsonmscott/WildGuessBot#readme",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"{.,src/js}/**/*.js\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
+  },
+  "dependencies": {
+    "axios": "^0.17.0",
+    "dotenv": "^4.0.0",
+    "snoowrap": "^1.14.2"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "1.7.4"
+  }
+}
